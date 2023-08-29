@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Imagens Aleatórias</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../style/home.css">
+</head>
+
+<body>
+  <!-- Ícone flutuante -->
+  <div class="floating-icon" onclick="goToHome()">
+    <img src="../../icons/home.png" alt="Ícone Home">
+  </div>
+
+  <h1>Gerador de Imagens Aleatórias</h1>
+  <div id="imageContainer"></div>
+  <button id="generateButton">Gerar Imagens</button>
+
+  <script>
+        // Array de URLs das imagens em sequência
+        const imageUrls = [
+      'img/foto-1.png',
+      'img/foto-2.png',
+      'img/foto-3.png',
+      'img/foto-4.png',
+      'img/foto-5.png',
+      'img/foto-6.png',
+      'img/foto-7.png',
+      'img/foto-8.png',
+      'img/foto-9.png',
+      'img/foto-10.png',
+      'img/foto-11.png',
+      'img/foto-8.png',
+      'img/foto-8.png',
+      'img/foto-8.png',
+      'img/foto-8.png',
+      'img/foto-8.png',
+      'img/foto-8.png',
+      'img/foto-18.png',
+      'img/foto-19.png',
+      'img/foto-20.png',
+      // Adicione mais URLs de imagens aqui
+    ];
+
+    let currentImageIndex = 0; // Índice da imagem atual
+
+    document.getElementById('generateButton').addEventListener('click', function () {
+      generateImage();
+    });
+
+    function generateImage() {
+      // Verifica se já chegou ao final da sequência e reinicia
+      if (currentImageIndex >= imageUrls.length) {
+        currentImageIndex = 0;
+      }
+
+      // Obtém a URL da imagem atual com base no índice
+      const imageUrl = imageUrls[currentImageIndex];
+
+      // Cria a imagem e adiciona ao contêiner
+      const image = document.createElement('img');
+      image.src = imageUrl;
+
+      const imageContainer = document.getElementById('imageContainer');
+      imageContainer.innerHTML = ''; // Limpa o contêiner antes de adicionar a nova imagem
+      imageContainer.appendChild(image);
+
+      // Avança para a próxima imagem na sequência
+      currentImageIndex++;
+    }
+  </script>
+
+  <script src="../../js/script.js"></script>
+</body>
+
+</html>

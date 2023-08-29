@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    background-color: #ffe99e; /* Cor de fundo amarelado */
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #444;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.contact {
+    padding: 10px;
+    background-color: #444;
+    color: #ffcc00;
+    border: 2px solid #222;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 200px;
+}
+
+.phone, .services, .hire-me {
+    margin-bottom: 10px;
+}
+
+.phone {
+    font-size: 18px;
+}
+
+.services {
+    font-size: 14px;
+}
+
+.hire-me {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}

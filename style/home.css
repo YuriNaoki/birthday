@@ -1,0 +1,49 @@
+/* Icone Home */
+
+.floating-icon {
+    position: fixed;
+    top: 16px;
+    left: 20px;
+    width: 43px;
+    height: 43px;
+    background-color: #F0F0F0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    border: solid 2px black;
+
+    /* Adicione a animação */
+    animation-name: floating;
+    animation-duration: 3s;
+    /* Duração da animação */
+    animation-iteration-count: infinite;
+    /* Repetir infinitamente */
+    animation-timing-function: ease-in-out;
+    /* Efeito de aceleração e desaceleração */
+}
+
+.floating-icon img {
+    width: 68%;
+    height: 68%;
+    margin-bottom: 2px;
+    margin-right: 1px;
+}
+
+/* Definir a animação de flutuação */
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+        /* Altura máxima do movimento para cima */
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

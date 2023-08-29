@@ -1,0 +1,78 @@
+body {
+    background-color: #282C34;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.progress {
+    border-radius: 0px 15px 0px 0px;
+}
+
+.progress-bar{
+    animation: widthIncrease 5s ease infinite, gradientMove 5s linear infinite;
+    background: linear-gradient(to right, #7144ad, #936bff, #7144ad);
+    background-size: 200% auto;
+}
+
+.form-check {
+    border: 1px solid #3498DB;
+    border-radius: 5px;
+    width: 80%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+
+.form-check:hover {
+    border: 1px solid #db3434;
+}
+
+.row {
+    height: 80vh;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.principal {
+    background-color: #1F264A;
+    color: white;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.perguntas {
+    background-color: #363C47;
+    color: white;
+    border-radius: 0px 0px 15px 0px;
+    height: 100%;
+}
+
+.btn-next {
+    background-color: #6E35F8;
+    color: white;
+    transition: background-color 0.9s ease;
+}
+
+.btn-next:hover {
+    background-color: #5011FA;
+    color: white;
+}
+
+.btn-prev {
+    background-color: #25282F;
+    color: white;
+}
+
+.btn-prev:hover {
+    background-color: #2E323C;
+    color: white;
+}
+
+@keyframes gradientMove {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+  

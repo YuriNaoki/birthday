@@ -1,0 +1,126 @@
+<header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">DailyNews</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Notícias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Esportes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Política</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Entretenimento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contato</a>
+                    </li>
+                </ul>
+                <form class=" d-flex form-inline">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Ícone flutuante -->
+    <div class="floating-icon" onclick="goToHome()">
+        <img src="../../icons/home.png" alt="Ícone Home">
+    </div>
+
+</header>
+
+
+
+<!-- Carrossel -->
+<div id="carouselExampleDark" class="carousel slide" style="max-width: 800px; margin: auto;">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+        <div class="carousel-item active " data-bs-interval="10000">
+            <a href="news-1.html">
+                <img src="img/Economia.jpg" class="d-block w-100" alt="Slide 1">
+                <div class="overlay"></div>
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Noticias - Economia</h1>
+                <p>Como está a economia do seu pais?</p>
+            </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="2000">
+            <a href="news-2.html">
+                <img src="img/ciencia.jpeg" class="d-block w-100" alt="...">
+                <div class="overlay"></div>
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Noticias - Ciências</h1>
+                <p>O que mundo da ciência tem pra você?</p>
+            </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="2000">
+            <a href="news-3.html">
+                <img src="img/tecnologia.webp" class="d-block w-100" alt="...">
+                <div class="overlay"></div>
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Noticias - Tecnologia</h1>
+                <p>Quais são as novidades tecnologicas?</p>
+            </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="2000">
+            <a href="news-4.html">
+                <img src="img/entreterimento.jpg" class="d-block w-100" alt="...">
+                <div class="overlay"></div>
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+                <h1>Noticias - Entreterimento</h1>
+                <p>Você sabe o que está rolando de legal?</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <a href="news-5.html">
+                <img src="img/DESAPARECIMENTO.jpg" class="d-block w-100" alt="...">
+                <div class="overlay"></div>
+
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+                <h1>DESAPARECIMENTO</h1>
+                <p>???????????????????????????</p>
+            </div>
+        </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>

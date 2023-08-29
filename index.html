@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Capítulos</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <main>
+
+        <h1>Capítulos</h1>
+
+        <section class="chapters">
+            <div id="app">
+                <div v-for="button in buttons" :key="button.id" @click="checkPassword(button.id)"
+                :class="{ 'unlocked': button.password === null }" class="chapter">{{ button.name }}</div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Importação do Vue.js 3 -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script>
+        // Criação da instância Vue
+        const app = Vue.createApp({
+            data() {
+                return {
+                    buttons: [
+                        { id: 1, name: 'Capítulo 1 - Um mar de Noticias', password: null, url: 'chapters/chapter-1/news-1.html' },
+                        { id: 2, name: 'Capítulo 2 - Imagens Abstratas', password: '1', url: 'chapters/chapter-2/image-generator.html' },
+                        { id: 3, name: 'Capítulo 3 - Suicidio', password: '2', url: 'chapters/chapter-3/hangman.html' },
+                        { id: 4, name: 'Capítulo 4 - Formulario', password: '3', url: 'chapters/chapter-4/form.html' },
+                        { id: 5, name: 'Capítulo 5 - Contrate-me', password: '4', url: 'chapters/chapter-5/phone-book.html' },
+                    ]
+                };
+            },
+            methods: {
+                checkPassword(buttonId) {
+                    const buttonData = this.buttons.find(button => button.id === buttonId);
+
+                    if (buttonData.password === null || window.prompt('Digite a senha:') === buttonData.password) {
+                        // Senha correta ou botão desbloqueado, redirecionar para o link associado ao botão
+
+                        if( !(buttonData.password === null) ){
+                            window.alert('Senha correta! Redirecionando...');
+                        }
+                        window.location.href = buttonData.url;
+                    } else {
+                        // Senha incorreta, mostrar mensagem de erro
+                        window.alert('Senha incorreta. Tente novamente.');
+                    }
+                }
+            }
+        });
+
+        // Monta a instância Vue na div com ID "app"
+        const vm = app.mount('#app');
+    </script>
+</body>
+
+</html>
+
