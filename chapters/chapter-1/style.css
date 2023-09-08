@@ -29,6 +29,22 @@ body {
     color: white;
 }
 
+.container-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carousel-img{
+
+    width: auto;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -208,4 +224,49 @@ footer {
 /* Estilo quando o mouse passa por cima do botão */
 .leia-mais-btn:hover {
     background-color: #0056b3;
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 576px) {
+    /* Estilos para dispositivos muito pequenos */
+    .carousel-img{
+        max-width: 780px;
+        max-height: 500px;
+    }
+}
+
+/* Small devices (tablets) */
+@media (min-width: 577px) and (max-width: 768px) {
+    /* Estilos para tablets */
+    .carousel-img{
+        max-width: 800px;
+        max-height: 500px;
+    }
+}
+
+/* Medium devices (laptops and small desktops) */
+@media (min-width: 769px) and (max-width: 992px) {
+    /* Estilos para laptops e desktops pequenos */
+    .carousel-img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 993px) and (max-width: 1200px) {
+    /* Estilos para desktops */
+    .carousel-img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 1201px) {
+    /* Estilos para desktops grandes */
+    .carousel-img{
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
